@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +30,42 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+.ce-block__content, 
+.ce-toolbar__content {
+  max-width: inherit;
 }
+
+::-webkit-scrollbar {
+  width:  10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-deem;
+
+  border-radius: 999px;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white;
+
+  border-radius: 999px;
+  box-shadow: inset 0px 0px 5px #fff;
+}
+
+.fcenter {
+  @apply flex items-center justify-center
+}
+
+.ab-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+}
+
+.left-theme {
+  @apply relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-[5%] before:h-full before:bg-deem overflow-hidden pl-[8%]
+}
+
